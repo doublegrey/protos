@@ -1,0 +1,16 @@
+syntax = "proto3";
+package cortex;
+option go_package = "github.com/doublegrey/protos";
+
+ 
+message Event {
+  string body = 1;
+}
+
+message Response {
+
+}
+
+service EventDecoder {
+  rpc SayHello(Event) returns (Response) {}
+}
